@@ -248,7 +248,6 @@ ${prefix}pause ⇏ إيقآف الأغنية مؤقتا
 ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
  `)
       .setFooter(message.author.tag, message.author.avatarURL)
-      .addField(message.guild.name)
 
 
 
@@ -278,7 +277,7 @@ client.on('message', function(message) {
     } else if(message.content.startsWith(prefix + "stream")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('يجب كتابة الحالة التي تريدها.');
-        client.user.setGame(args , 'https://www.twitch.tv/eviiiiiiil');
+        client.user.setGame(args , 'https://www.twitch.tv/brokenklash');
         message.channel.send(':white_check_mark: Done!').then(msg => {
            msg.delete(3000);
           message.delete(3000);
@@ -322,8 +321,7 @@ client.on('message', function(message) {
 
 
 client.on('message', async message => {
-if(msg.author.id !== '408970492838543360') return;
-            if(!message.channel.guild) return;
+ if(msg.author.id !== '408970492838543360') return;
              if (message.content.startsWith("As")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
