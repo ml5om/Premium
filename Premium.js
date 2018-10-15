@@ -321,7 +321,7 @@ client.on('message', function(message) {
 
 
 client.on('message', async message => {
- if(msg.author.id !== '408970492838543360') return;
+ if(message.author.id !== '408970492838543360') return;
              if (message.content.startsWith("As")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
