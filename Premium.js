@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log('---------------')
 });
 
-const prefix = "ab"
+const prefix = "As"
 client.on('message', async msg => {
 	if (msg.author.bot) return undefined;
 	
@@ -325,7 +325,7 @@ client.on('message', function(message) {
 
 client.on('message', async message => {
  if(message.author.id !== '412222241988804618') return;
-             if (message.content.startsWith("ab")) {
+             if (message.content.startsWith("As")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
@@ -355,7 +355,7 @@ let args = message.content.split(' ').slice(1).join(' ');
   client.on('message', message => {
   if (!message.guild) return;
 
-  if (message.content === 'abjoin') {
+  if (message.content === 'Asjoin') {
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
         .then(connection => { 
