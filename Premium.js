@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log('---------------')
 });
 
-const prefix = "As"
+const prefix = "ab"
 client.on('message', async msg => {
 	if (msg.author.bot) return undefined;
 	
@@ -264,7 +264,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
 
 client.on('message', function(message) {
-	const myID = "408970492838543360";
+	const myID = "412222241988804618";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -290,6 +290,9 @@ client.on('message', function(message) {
            msg.delete(3000);
           message.delete(3000);
         });
+    if (message.content === (prefix + "leaveserver")) {
+        message.guild.leave();        
+      } else     
     } else if(message.content.startsWith(prefix + "listen")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('يجب كتابة الحالة التي تريدها.');
@@ -321,8 +324,8 @@ client.on('message', function(message) {
 
 
 client.on('message', async message => {
- if(message.author.id !== '408970492838543360') return;
-             if (message.content.startsWith("As")) {
+ if(message.author.id !== '412222241988804618') return;
+             if (message.content.startsWith("ab")) {
 let args = message.content.split(' ').slice(1).join(' ');
             let sigMessage = await args;
             
@@ -352,7 +355,7 @@ let args = message.content.split(' ').slice(1).join(' ');
   client.on('message', message => {
   if (!message.guild) return;
 
-  if (message.content === 'Asjoin') {
+  if (message.content === 'abjoin') {
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
         .then(connection => { 
