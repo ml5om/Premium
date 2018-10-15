@@ -289,10 +289,7 @@ client.on('message', function(message) {
         message.channel.send(':white_check_mark: Done!').then(msg => {
            msg.delete(3000);
           message.delete(3000);
-        });
-    if (message.content === (prefix + "leaveserver")) {
-        message.guild.leave();        
-      } else     
+        });   
     } else if(message.content.startsWith(prefix + "listen")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('يجب كتابة الحالة التي تريدها.');
